@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Confirm Missing File ? Plummer Leads</title>
+  <meta name="description" content="The file you requested at Plummer Leads is missing. Choose to go back or proceed without it.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Confirm Missing File ? Plummer Leads">
+  <meta property="og:description" content="The file you requested at Plummer Leads is missing. Choose to go back or proceed without it.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://plummerleads.com/confirmMissingFile.html">
+  <meta property="og:image" content="https://plummerleads.com/images/logo.png">
+  <meta property="og:site_name" content="Plummer Leads">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Confirm Missing File ? Plummer Leads">
+  <meta name="twitter:description" content="The file you requested at Plummer Leads is missing. Choose to go back or proceed without it.">
+  <meta name="twitter:image" content="https://plummerleads.com/images/logo.png">
+  <!-- JSON-LD LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Plummer Leads",
+    "image": "https://plummerleads.com/images/logo.png",
+    "url": "https://plummerleads.com",
+    "telephone": "+1-000-000-0000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Example St",
+      "addressLocality": "Anytown",
+      "addressRegion": "AN",
+      "postalCode": "00000",
+      "addressCountry": "US"
+    },
+    "openingHours": "24/7",
+    "priceRange": "$$"
+  }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">Plummer Leads</a>
+      <nav class="site-nav" role="navigation">
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content container">
+    <section class="confirm-missing-file">
+      <h1>File Not Found</h1>
+      <p>The file you requested is missing. Would you like to proceed without it or go back?</p>
+      <div class="button-group">
+        <button type="button" class="btn btn-secondary" id="goBackBtn">Go Back</button>
+        <a href="next-step.html" class="btn btn-primary">Proceed</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Plummer Leads. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p>Created by <a href="https://keendevs.com/" target="_blank" rel="noopener">KeenDevs</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var navToggle = document.querySelector('.nav-toggle');
+      var navList = document.querySelector('.nav-list');
+      navToggle.addEventListener('click', function() {
+        var expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        navList.classList.toggle('nav-list--visible');
+      });
+      var goBackBtn = document.getElementById('goBackBtn');
+      if (goBackBtn) {
+        goBackBtn.addEventListener('click', function() {
+          history.back();
+        });
+      }
+    });
+  </script>
+</body>
+</html>
