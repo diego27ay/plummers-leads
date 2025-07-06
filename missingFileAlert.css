@@ -1,0 +1,128 @@
+:root {
+  --alert-error-bg: #f8d7da;
+  --alert-error-border: #f5c6cb;
+  --alert-error-text: #721c24;
+  --alert-padding: 1rem;
+  --alert-font-size: 1rem;
+  --alert-border-radius: 4px;
+  --alert-icon-size: 1.5rem;
+  --alert-transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.missing-file-alert {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem auto;
+  background-color: var(--alert-error-bg);
+  border: 1px solid var(--alert-error-border);
+  color: var(--alert-error-text);
+  padding: var(--alert-padding);
+  border-radius: var(--alert-border-radius);
+  font-size: var(--alert-font-size);
+  gap: 0.75rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: var(--alert-transition);
+}
+
+@supports not (gap: 1px) {
+  .missing-file-alert > * + * {
+    margin-left: 0.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .missing-file-alert {
+    animation: fadeInDown 0.4s forwards;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .missing-file-alert {
+    animation: none;
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.missing-file-alert__icon {
+  flex-shrink: 0;
+  font-size: var(--alert-icon-size);
+  line-height: 1;
+}
+
+.missing-file-alert__message {
+  flex-grow: 1;
+  line-height: 1.4;
+}
+
+.missing-file-alert__action {
+  margin-left: auto;
+  text-decoration: underline;
+  color: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.missing-file-alert__action:focus {
+  outline: 2px dashed currentColor;
+  outline-offset: 2px;
+}
+
+.missing-file-alert__close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: transparent;
+  border: none;
+  color: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.missing-file-alert__close:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.missing-file-alert--hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .missing-file-alert {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem;
+  }
+  .missing-file-alert__action {
+    margin: 0.5rem 0 0 0;
+  }
+  .missing-file-alert__close {
+    top: 0.25rem;
+    right: 0.25rem;
+  }
+  @supports not (gap: 1px) {
+    .missing-file-alert > * + * {
+      margin-left: 0;
+      margin-top: 0.5rem;
+    }
+  }
+}
