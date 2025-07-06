@@ -1,0 +1,102 @@
+/* confirmationFallbackStyles.css */
+
+:root {
+  --cf-bg-color: #f9f9f9;
+  --cf-border-color: #e0e0e0;
+  --cf-title-color: #333333;
+  --cf-text-color: #555555;
+  --cf-button-bg: #007acc;
+  --cf-button-color: #ffffff;
+  --cf-button-hover-bg: #005fa3;
+  --cf-spacing-unit: 1rem;
+}
+
+.confirmation-fallback,
+.confirmation-fallback * {
+  box-sizing: border-box;
+}
+
+.confirmation-fallback {
+  background-color: var(--cf-bg-color);
+  border: 1px solid var(--cf-border-color);
+  border-radius: 8px;
+  padding: calc(var(--cf-spacing-unit) * 3);
+  max-width: 28rem;
+  margin: calc(var(--cf-spacing-unit) * 4) auto;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  color: var(--cf-text-color);
+}
+
+.confirmation-fallback__icon {
+  font-size: 3rem;
+  color: var(--cf-button-bg);
+  margin-bottom: var(--cf-spacing-unit);
+  line-height: 1;
+}
+
+.confirmation-fallback__title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--cf-title-color);
+  margin-bottom: calc(var(--cf-spacing-unit) / 2);
+}
+
+.confirmation-fallback__message {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--cf-text-color);
+  margin-bottom: calc(var(--cf-spacing-unit) * 1.5);
+}
+
+.confirmation-fallback__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--cf-spacing-unit);
+}
+
+.confirmation-fallback__actions .btn {
+  display: inline-block;
+  padding: calc(var(--cf-spacing-unit) * 0.75) calc(var(--cf-spacing-unit) * 1.5);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--cf-button-color);
+  background-color: var(--cf-button-bg);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.confirmation-fallback__actions .btn:hover,
+.confirmation-fallback__actions .btn:focus {
+  background-color: var(--cf-button-hover-bg);
+}
+
+.confirmation-fallback__actions .btn:focus-visible {
+  outline: 3px solid var(--cf-button-hover-bg);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .confirmation-fallback__actions .btn {
+    transition: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .confirmation-fallback {
+    padding: calc(var(--cf-spacing-unit) * 2);
+    margin: calc(var(--cf-spacing-unit) * 2);
+  }
+
+  .confirmation-fallback__title {
+    font-size: 1.5rem;
+  }
+
+  .confirmation-fallback__message {
+    font-size: 0.9rem;
+  }
+}
