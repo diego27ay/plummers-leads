@@ -1,54 +1,95 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Add a missing AI file to plummer leads. Upload your .ai file with a custom name to complete the asset library.">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>plummer leads ? Add Missing AI File</title>
-    <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Add Missing AI File - Plummer Leads</title>
+  <meta name="description" content="Upload your missing Adobe Illustrator (.ai) file to enhance the Plummer Leads design assets quickly and securely.">
+  <meta property="og:title" content="Add Missing AI File - Plummer Leads">
+  <meta property="og:description" content="Upload your missing Adobe Illustrator (.ai) file to enhance the Plummer Leads design assets quickly and securely.">
+  <meta property="og:url" content="https://plummerleads.com/addMissingAiFile.html">
+  <meta property="og:image" content="https://plummerleads.com/images/banner.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Add Missing AI File - Plummer Leads">
+  <meta name="twitter:description" content="Upload your missing Adobe Illustrator (.ai) file to enhance the Plummer Leads design assets quickly and securely.">
+  <meta name="twitter:url" content="https://plummerleads.com/addMissingAiFile.html">
+  <meta name="twitter:image" content="https://plummerleads.com/images/banner.jpg">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Plummer Leads",
+    "image": "https://plummerleads.com/images/banner.jpg",
+    "url": "https://plummerleads.com",
+    "telephone": "+1-800-123-4567",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Main St",
+      "addressLocality": "Anytown",
+      "addressRegion": "CA",
+      "postalCode": "12345",
+      "addressCountry": "US"
+    },
+    "openingHours": "Mo-Fr 09:00-17:00",
+    "priceRange": "$$"
+  }
+  </script>
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <h1 class="site-title"><a href="index.html">plummer leads</a></h1>
-            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">
-                <span class="nav-toggle-bar"></span>
-                <span class="nav-toggle-bar"></span>
-                <span class="nav-toggle-bar"></span>
-                <span class="sr-only">Menu</span>
-            </button>
-            <nav id="primary-navigation" class="primary-nav">
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="leads.html" class="nav-link">Leads</a></li>
-                    <li class="nav-item"><a href="addMissingAiFile.html" class="nav-link active">Add AI File</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main class="container">
-        <section class="form-section">
-            <h2 class="section-title">Add Missing AI File</h2>
-            <form action="/api/upload-ai-file" method="post" enctype="multipart/form-data" class="form">
-                <div class="form-group">
-                    <label for="ai-file-name" class="form-label">File Name</label>
-                    <input type="text" id="ai-file-name" name="aiFileName" class="form-input" placeholder="Enter file name" required>
-                </div>
-                <div class="form-group">
-                    <label for="ai-file-upload" class="form-label">Upload AI File</label>
-                    <input type="file" id="ai-file-upload" name="aiFile" class="form-input" accept=".ai" required>
-                </div>
-                <div class="form-actions">
-                    <button type="submit" class="btn btn-primary">Upload</button>
-                    <a href="index.html" class="btn btn-secondary">Cancel</a>
-                </div>
-            </form>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <div class="container">
-            <p class="footer-text">? 2025 plummer leads. All rights reserved.</p>
-        </div>
-    </footer>
-    <script src="js/main.js"></script>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">Plummer Leads</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="site-nav" id="site-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="addMissingAiFile.html" class="active">Add AI File</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <h1>Add Missing AI File</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data" class="form">
+      <div class="form-group">
+        <label for="fileName">File Name</label>
+        <input type="text" id="fileName" name="fileName" required placeholder="Enter file name">
+      </div>
+      <div class="form-group">
+        <label for="aiFile">Choose AI File</label>
+        <input type="file" id="aiFile" name="aiFile" accept=".ai" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Upload File</button>
+    </form>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms of Service</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2025 Plummer Leads. All rights reserved.</p>
+      <p>Created by <a href="https://keendevs.com/" target="_blank" rel="noopener">KeenDevs</a></p>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const siteNav = document.querySelector('#site-nav');
+      navToggle.addEventListener('click', function() {
+        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', (!isExpanded).toString());
+        siteNav.classList.toggle('nav-open');
+      });
+    });
+  </script>
 </body>
 </html>
