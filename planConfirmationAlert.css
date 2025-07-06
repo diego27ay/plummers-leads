@@ -1,0 +1,90 @@
+.plan-confirmation-alert {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -110%);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  background-color: var(--color-background, #ffffff);
+  color: var(--color-text, #333333);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  width: calc(100% - 2rem);
+  max-width: 400px;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.plan-confirmation-alert.is-visible {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}
+
+.plan-confirmation-alert__header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.plan-confirmation-alert__body {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.plan-confirmation-alert__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.plan-confirmation-alert__actions .btn {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.plan-confirmation-alert__actions .btn--primary {
+  background-color: var(--color-primary, #007bff);
+  color: var(--color-white, #ffffff);
+}
+
+.plan-confirmation-alert__actions .btn--primary:hover {
+  background-color: var(--color-primary-dark, #0056b3);
+}
+
+.plan-confirmation-alert__actions .btn--primary:focus,
+.plan-confirmation-alert__actions .btn--primary:focus-visible {
+  outline: 2px solid var(--color-primary-dark, #0056b3);
+  outline-offset: 2px;
+}
+
+.plan-confirmation-alert__actions .btn--secondary {
+  background-color: transparent;
+  color: var(--color-secondary, #6c757d);
+}
+
+.plan-confirmation-alert__actions .btn--secondary:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.plan-confirmation-alert__actions .btn--secondary:focus,
+.plan-confirmation-alert__actions .btn--secondary:focus-visible {
+  outline: 2px solid var(--color-secondary, #6c757d);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plan-confirmation-alert,
+  .plan-confirmation-alert.is-visible,
+  .plan-confirmation-alert__actions .btn {
+    transition: none;
+  }
+}
