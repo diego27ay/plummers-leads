@@ -1,0 +1,122 @@
+.plan-confirmation-addition-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.plan-confirmation-addition-overlay.active {
+  display: flex;
+}
+
+.plan-confirmation-addition-modal {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  max-width: 480px;
+  width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-confirmation-addition-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.plan-confirmation-addition-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+.plan-confirmation-addition-close {
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #666666;
+  padding: 0.25rem;
+}
+
+.plan-confirmation-addition-close:hover,
+.plan-confirmation-addition-close:focus {
+  color: #000000;
+}
+
+.plan-confirmation-addition-body {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  color: #444444;
+}
+
+.plan-confirmation-addition-body p {
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
+
+.plan-confirmation-addition-footer {
+  padding: 0.75rem 1.5rem;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.plan-confirmation-addition-button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.plan-confirmation-addition-button-primary {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+}
+
+.plan-confirmation-addition-button-primary:hover,
+.plan-confirmation-addition-button-primary:focus {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.plan-confirmation-addition-button-secondary {
+  background-color: transparent;
+  color: #007bff;
+  border-color: #007bff;
+}
+
+.plan-confirmation-addition-button-secondary:hover,
+.plan-confirmation-addition-button-secondary:focus {
+  background-color: #e6f0ff;
+}
+
+@media (min-width: 768px) {
+  .plan-confirmation-addition-modal {
+    width: 400px;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
